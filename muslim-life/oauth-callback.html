@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signing in… – Muslim Life</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a472a, #2d6a4f);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 40px 32px;
+      max-width: 420px;
+      backdrop-filter: blur(8px);
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 12px; }
+    p { font-size: 0.95rem; opacity: 0.85; line-height: 1.6; }
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .fallback {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+    .fallback a {
+      color: #a5d6a7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🕌 Muslim Life</h1>
+    <div class="spinner"></div>
+    <p>Completing sign-in… If the app doesn't open automatically, please return to the Muslim Life app manually.</p>
+    <div class="fallback">
+      Having trouble? <a href="mailto:siratalmustaqeem60177@gmail.com">Contact support</a>
+    </div>
+  </div>
+
+  <script>
+    // এই script future তে actual deep-link redirect logic দিয়ে replace হবে।
+    // যখন OAuth implement হবে, তখন এখানে query params (code, state ইত্যাদি)
+    // পড়ে app এর custom URL scheme এ redirect করা হবে, যেমন:
+    // window.location.href = "muslimlife://oauth/callback" + window.location.search;
+  </script>
+</body>
+</html>
